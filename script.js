@@ -7,7 +7,6 @@ let mouseY = 0;
 let currentX = 0;
 let currentY = 0;
 
-/* MOUSE MOVE */
 
 document.addEventListener("mousemove", (e) => {
 
@@ -27,7 +26,6 @@ document.addEventListener("touchmove", (e) => {
 
 });
 
-/* PLAYER MOTION */
 
 function animatePlayers(){
 
@@ -51,7 +49,6 @@ function animatePlayers(){
 
 animatePlayers();
 
-/* BUTTON GLOW */
 
 const buttons = document.querySelectorAll(".btn");
 

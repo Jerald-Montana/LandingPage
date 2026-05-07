@@ -108,7 +108,6 @@ body{
     z-index:2;
 }
 
-/* PLAYERS */
 
 .player{
     position:absolute;
@@ -129,7 +128,6 @@ body{
     transform 0.2s linear;
 }
 
-/* LEFT PLAYER */
 
 .left-player{
     width:clamp(170px, 28vw, 440px);
@@ -157,7 +155,6 @@ body{
     rightEntrance 1.4s ease forwards;
 }
 
-/* CONTENT */
 
 .content{
     position:relative;
@@ -191,7 +188,6 @@ body{
     animation-delay:0.3s;
 }
 
-/* TITLE */
 
 .main-title{
     font-size:clamp(34px, 7vw, 60px);
@@ -228,7 +224,6 @@ body{
     0 4px 15px rgba(0,140,255,0.25);
 }
 
-/* DESCRIPTION */
 
 .description{
     margin-top:28px;
@@ -254,7 +249,6 @@ body{
     animation-delay:1s;
 }
 
-/* BUTTONS */
 
 .buttons{
     margin-top:45px;
@@ -266,7 +260,6 @@ body{
     flex-wrap:wrap;
 }
 
-/* BUTTON */
 
 .btn{
     position:relative;
@@ -302,7 +295,6 @@ body{
     );
 }
 
-/* PRIMARY */
 
 .primary-btn{
     background:
@@ -329,8 +321,6 @@ body{
     box-shadow:
     0 0 25px rgba(0,140,255,0.55);
 }
-
-/* SECONDARY */
 
 .secondary-btn{
 
@@ -360,7 +350,6 @@ body{
     0 0 20px rgba(0,140,255,0.45);
 }
 
-/* BUTTON GLOW */
 
 .btn::before{
     content:'';
@@ -396,7 +385,6 @@ body{
     height:300px;
 }
 
-/* SPORTS LINES */
 
 .line-effect{
     position:absolute;
@@ -444,7 +432,6 @@ body{
     animation:moveLine3 8s linear infinite;
 }
 
-/* HERO STREAK */
 
 .hero-streak{
     position:absolute;
@@ -473,7 +460,6 @@ body{
     streakMove 5s linear infinite;
 }
 
-/* MOBILE */
 
 .mobile-slider{
     display:none;
@@ -483,7 +469,6 @@ body{
     display:none;
 }
 
-/* ANIMATIONS */
 
 @keyframes leftEntrance{
     0%{
@@ -652,7 +637,6 @@ body{
     }
 }
 
-/* MOBILE */
 
 @media(max-width:800px){
 
@@ -777,7 +761,6 @@ body{
         saturate(1.15);
     }
 
-    /* BALL */
 
     .mobile-ball{
         display:block;
@@ -811,7 +794,6 @@ body{
     }
 }
 
-/* MOBILE ANIMATIONS */
 
 @keyframes mobileSlide{
     0%{
