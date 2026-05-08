@@ -67,3 +67,58 @@ buttons.forEach((button) => {
     });
 
 });
+
+
+
+
+const tournamentImage =
+document.querySelector(".tournament-image-box");
+
+document.addEventListener("mousemove", (e) => {
+
+    const x =
+    (window.innerWidth / 2 - e.clientX) / 45;
+
+    const y =
+    (window.innerHeight / 2 - e.clientY) / 45;
+
+    tournamentImage.style.transform =
+    `
+    translate(${x}px, ${y}px)
+    `;
+});
+
+
+const infoCards =
+document.querySelectorAll(".info-card");
+
+infoCards.forEach((card) => {
+
+    card.addEventListener("mousemove", (e) => {
+
+        const rect =
+        card.getBoundingClientRect();
+
+        const x =
+        e.clientX - rect.left;
+
+        const y =
+        e.clientY - rect.top;
+
+        card.style.background =
+        `
+        radial-gradient(
+            circle at ${x}px ${y}px,
+            rgba(255,255,255,0.18),
+            rgba(255,255,255,0.08)
+        )
+        `;
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.background =
+        "rgba(255,255,255,0.08)";
+    });
+
+});
