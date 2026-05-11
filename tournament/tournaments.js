@@ -1,5 +1,6 @@
 const tournaments = [
 
+    
     {
         image: "../images/14.jpeg",
         badge: "Featured Event",
@@ -10,66 +11,92 @@ const tournaments = [
         "Compete in the country's national Epic Championships and earn official rankings.",
         status: "Pre-Registration Open"
     },
+    
 
 ];
 
+const grid =
+document.getElementById("tournamentGrid");
 
-const grid = document.getElementById("tournamentGrid");
+const emptyState =
+document.getElementById("emptyTournamentState");
 
-tournaments.forEach((event, index) => {
+/* EMPTY STATE */
 
-    const card = document.createElement("div");
+if(tournaments.length === 0){
 
-    card.classList.add("tournament-card");
+    grid.style.display = "none";
 
-    card.style.animationDelay = `${index * 0.15}s`;
+    emptyState.classList.add("show");
 
-    card.innerHTML = `
+}
 
-        <div class="card-image">
+/* DISPLAY TOURNAMENTS */
 
-            <div class="card-badge">
-                ${event.badge}
-            </div>
+else{
 
-            <img src="${event.image}" alt="${event.title}">
+    grid.style.display = "grid";
 
-        </div>
+    emptyState.classList.remove("show");
 
-        <div class="card-content">
+    tournaments.forEach((event, index) => {
 
-            <div class="card-date">
-                ${event.date}
-            </div>
+        const card =
+        document.createElement("div");
 
-            <div class="card-title">
-                ${event.title}
-            </div>
+        card.classList.add("tournament-card");
 
-            <div class="card-location">
-                📍 ${event.location}
-            </div>
+        card.style.animationDelay =
+        `${index * 0.15}s`;
 
-            <div class="card-description">
-                ${event.description}
-            </div>
+        card.innerHTML = `
 
-            <div class="card-footer">
+            <div class="card-image">
 
-                <div class="card-status">
-                    ${event.status}
+                <div class="card-badge">
+                    ${event.badge}
                 </div>
 
-                <a href="#" class="card-btn">
-                    View Event
-                </a>
+                <img src="${event.image}" alt="${event.title}">
 
             </div>
 
-        </div>
+            <div class="card-content">
 
-    `;
+                <div class="card-date">
+                    ${event.date}
+                </div>
 
-    grid.appendChild(card);
+                <div class="card-title">
+                    ${event.title}
+                </div>
 
-});
+                <div class="card-location">
+                    📍 ${event.location}
+                </div>
+
+                <div class="card-description">
+                    ${event.description}
+                </div>
+
+                <div class="card-footer">
+
+                    <div class="card-status">
+                        ${event.status}
+                    </div>
+
+                    <a href="#" class="card-btn">
+                        View Event
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+}

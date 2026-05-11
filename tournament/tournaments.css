@@ -195,7 +195,7 @@ body{
 }
 
 .section-title h2{
-    font-size:clamp(34px, 5vw, 60px);
+    font-size:clamp(34px, 5vw, 45px);
 
     margin-top:12px;
 
@@ -609,3 +609,120 @@ body{
     }
 }
 
+.empty-tournament-state{
+    display:none;
+    position:relative;
+    min-height:5vh;
+    width:100%;
+    padding:30px 20px;
+    border-radius:36px;
+    overflow:hidden;
+    text-align:center;
+    background:linear-gradient(135deg,#ffffff,#eef7ff);
+    box-shadow:0 25px 50px rgba(0,0,0,0.08);
+}
+
+.empty-tournament-state.show{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.empty-icon{
+    width:80px;
+    height:80px;
+    border-radius:32px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1d8fff,#0066d6);
+    color:white;
+    font-size:46px;
+    margin-bottom:25px;
+    box-shadow:0 18px 35px rgba(29,143,255,0.35);
+    animation:emptyFloat 3s ease-in-out infinite;
+}
+
+.empty-tournament-state h2{
+    font-size:clamp(34px,5vw,40px);
+    line-height:1.05;
+    font-weight:800;
+    max-width:850px;
+    margin-bottom:18px;
+}
+
+.empty-tournament-state p{
+    max-width:600px;
+    color:#555;
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.empty-btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:16px 34px;
+    border-radius:18px;
+    background:#1d8fff;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    box-shadow:0 15px 30px rgba(29,143,255,0.3);
+    transition:0.35s ease;
+}
+
+.empty-btn:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+.empty-bg-ball{
+    position:absolute;
+    border-radius:50%;
+    background:#dfff39;
+    box-shadow:0 0 18px #dfff39, 0 0 45px #dfff39;
+}
+
+.ball-one{
+    width:34px;
+    height:34px;
+    top:18%;
+    left:12%;
+    animation:ballFloat 4s ease-in-out infinite;
+}
+
+.ball-two{
+    width:24px;
+    height:24px;
+    bottom:18%;
+    right:14%;
+    animation:ballFloat2 5s ease-in-out infinite;
+}
+
+@keyframes emptyFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+@media(max-width:700px){
+    .empty-tournament-state{
+        min-height:55vh;
+        padding:55px 22px;
+    }
+
+    .empty-icon{
+        width:85px;
+        height:85px;
+        font-size:36px;
+    }
+
+    .empty-tournament-state h2{
+        font-size:36px;
+    }
+
+    .empty-tournament-state p{
+        font-size:15px;
+    }
+}
