@@ -155,7 +155,7 @@ announcement.addEventListener("mouseleave", () => {
 
         announcement.classList.add("collapsed");
 
-    }, 1200);
+    }, 1500);
 
 });
 
