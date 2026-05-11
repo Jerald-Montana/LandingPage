@@ -159,19 +159,17 @@ announcement.addEventListener("mouseleave", () => {
 
 });
 
-/* ========================= */
-/* PAGE LOADER */
-/* ========================= */
-
 window.addEventListener("load", () => {
 
     const loader =
     document.getElementById("pageLoader");
 
+    loader.classList.add("hide");
+
     setTimeout(() => {
 
-        loader.classList.add("hide");
+        loader.remove();
 
-    }, 500);
+    }, 900);
 
 });
