@@ -3041,3 +3041,100 @@ body{
         font-size:22px;
     }
 }
+
+
+/* ========================= */
+/* PAGE LOADER */
+/* ========================= */
+
+.page-loader{
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #eef7ff,
+        #dff0ff
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999;
+
+    transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+/* HIDE */
+
+.page-loader.hide{
+    opacity:0;
+
+    visibility:hidden;
+}
+
+/* CONTENT */
+
+.loader-content{
+    text-align:center;
+}
+
+/* PICKLEBALL */
+
+.loader-ball{
+    width:70px;
+    height:70px;
+
+    margin:auto auto 25px;
+
+    border-radius:50%;
+
+    background:#dfff39;
+
+    box-shadow:
+    0 0 20px #dfff39,
+    0 0 50px #dfff39;
+
+    animation:
+    loaderBounce 1.2s ease-in-out infinite;
+}
+
+/* TEXT */
+
+.loader-content h2{
+    font-size:24px;
+
+    font-weight:800;
+
+    color:#0171b9;
+
+    letter-spacing:1px;
+}
+
+/* ANIMATION */
+
+@keyframes loaderBounce{
+
+    0%{
+        transform:
+        translateY(0)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translateY(-18px)
+        scale(1.08);
+    }
+
+    100%{
+        transform:
+        translateY(0)
+        scale(1);
+    }
+}

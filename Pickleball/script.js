@@ -158,3 +158,20 @@ announcement.addEventListener("mouseleave", () => {
     }, 1200);
 
 });
+
+/* ========================= */
+/* PAGE LOADER */
+/* ========================= */
+
+window.addEventListener("load", () => {
+
+    const loader =
+    document.getElementById("pageLoader");
+
+    setTimeout(() => {
+
+        loader.classList.add("hide");
+
+    }, 500);
+
+});
