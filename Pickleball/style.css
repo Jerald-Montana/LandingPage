@@ -130,7 +130,7 @@ body{
 
 
 .left-player{
-    width:clamp(170px, 28vw, 440px);
+    width:clamp(170px, 28vw, 390px);
 
     left:max(-35px, 1vw);
     bottom:-10px;
