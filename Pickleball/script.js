@@ -124,22 +124,15 @@ infoCards.forEach((card) => {
 });
 
 
-/* ========================= */
-/* ANNOUNCEMENT COLLAPSE */
-/* ========================= */
-
 const announcement =
 document.getElementById("announcement");
-
-/* COLLAPSE AFTER 3 SECONDS */
 
 setTimeout(() => {
 
     announcement.classList.add("collapsed");
 
-}, 3000);
+}, 5);
 
-/* EXPAND ON HOVER */
 
 announcement.addEventListener("mouseenter", () => {
 
