@@ -2731,11 +2731,6 @@ body{
 }
 
 
-
-/* ========================= */
-/* EXPANDABLE ANNOUNCEMENT */
-/* ========================= */
-
 .announcement-wrapper{
     position:fixed;
 
@@ -2744,10 +2739,6 @@ body{
 
     z-index:9999;
 }
-
-/* ========================= */
-/* ICON */
-/* ========================= */
 
 .announcement-icon{
     position:absolute;
@@ -2785,7 +2776,6 @@ body{
     z-index:5;
 }
 
-/* GLOWING RING */
 
 .announcement-ping{
     position:absolute;
@@ -2799,10 +2789,6 @@ body{
     animation:
     ping 2s infinite;
 }
-
-/* ========================= */
-/* MESSAGE BOX */
-/* ========================= */
 
 .announcement-box{
     position:absolute;
@@ -2845,8 +2831,6 @@ body{
     0 20px 40px rgba(0,0,0,0.18);
 }
 
-/* COLLAPSED STATE */
-
 .announcement-wrapper.collapsed .announcement-box{
 
     opacity:0;
@@ -2858,7 +2842,6 @@ body{
 
 }
 
-/* ICON SHOW */
 
 .announcement-wrapper.collapsed .announcement-icon{
 
@@ -2867,8 +2850,6 @@ body{
     transform:
     scale(1);
 }
-
-/* EXPANDED */
 
 .announcement-wrapper:not(.collapsed) .announcement-icon{
 
@@ -2879,10 +2860,6 @@ body{
 
     pointer-events:none;
 }
-
-/* ========================= */
-/* GLOW */
-/* ========================= */
 
 .announcement-glow{
     position:absolute;
@@ -2907,8 +2884,6 @@ body{
     animation:
     glowFloat 6s ease-in-out infinite;
 }
-
-/* CONTENT */
 
 .announcement-content{
     position:relative;
@@ -2958,8 +2933,6 @@ body{
     margin-bottom:20px;
 }
 
-/* BUTTON */
-
 .announcement-content a{
     display:inline-flex;
     align-items:center;
@@ -2988,10 +2961,6 @@ body{
     translateY(-4px)
     scale(1.03);
 }
-
-/* ========================= */
-/* ANIMATIONS */
-/* ========================= */
 
 @keyframes ping{
 
@@ -3022,8 +2991,6 @@ body{
     }
 }
 
-/* MOBILE */
-
 @media(max-width:700px){
 
     .announcement-wrapper{
@@ -3042,15 +3009,18 @@ body{
     }
 }
 
-
-/* ========================= */
-/* PAGE LOADER */
-/* ========================= */
-
 .page-loader{
     position:fixed;
 
-    inset:0;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     background:
     linear-gradient(
@@ -3059,38 +3029,35 @@ body{
         #dff0ff
     );
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     z-index:999999;
+
+    overflow:hidden;
 
     transition:
     opacity 0.8s ease,
     visibility 0.8s ease;
 }
 
-/* HIDE */
-
 .page-loader.hide{
     opacity:0;
 
     visibility:hidden;
-}
 
-/* CONTENT */
+    pointer-events:none;
+}
 
 .loader-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
 }
-
-/* PICKLEBALL */
 
 .loader-ball{
     width:70px;
     height:70px;
-
-    margin:auto auto 25px;
 
     border-radius:50%;
 
@@ -3100,11 +3067,11 @@ body{
     0 0 20px #dfff39,
     0 0 50px #dfff39;
 
+    margin-bottom:24px;
+
     animation:
     loaderBounce 1.2s ease-in-out infinite;
 }
-
-/* TEXT */
 
 .loader-content h2{
     font-size:24px;
@@ -3113,10 +3080,8 @@ body{
 
     color:#0171b9;
 
-    letter-spacing:1px;
+    margin:0;
 }
-
-/* ANIMATION */
 
 @keyframes loaderBounce{
 
@@ -3128,7 +3093,7 @@ body{
 
     50%{
         transform:
-        translateY(-18px)
+        translateY(-16px)
         scale(1.08);
     }
 
