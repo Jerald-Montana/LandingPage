@@ -1391,7 +1391,11 @@ body{
     }
 
     .tournament-title{
-        font-size:38px;
+        font-size:34px;
+    }
+
+    .tournament-title p{
+        font-size:18px;
     }
 
     .tournament-description{
@@ -2723,5 +2727,317 @@ body{
         width:100%;
 
         text-align:center;
+    }
+}
+
+
+
+/* ========================= */
+/* EXPANDABLE ANNOUNCEMENT */
+/* ========================= */
+
+.announcement-wrapper{
+    position:fixed;
+
+    right:25px;
+    bottom:25px;
+
+    z-index:9999;
+}
+
+/* ========================= */
+/* ICON */
+/* ========================= */
+
+.announcement-icon{
+    position:absolute;
+
+    right:0;
+    bottom:0;
+
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0171b9,
+        #1da1ff
+    );
+
+    color:white;
+
+    font-size:28px;
+
+    box-shadow:
+    0 15px 35px rgba(1,113,185,0.35);
+
+    transition:0.45s ease;
+
+    z-index:5;
+}
+
+/* GLOWING RING */
+
+.announcement-ping{
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,0.6);
+
+    animation:
+    ping 2s infinite;
+}
+
+/* ========================= */
+/* MESSAGE BOX */
+/* ========================= */
+
+.announcement-box{
+    position:absolute;
+
+    right:0;
+    bottom:0;
+
+    width:340px;
+
+    padding:24px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    opacity:1;
+
+    transform:
+    scale(1);
+
+    transform-origin:
+    bottom right;
+
+    transition:
+    0.45s ease;
+
+    backdrop-filter:blur(18px);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.22),
+        rgba(255,255,255,0.08)
+    );
+
+    border:
+    1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.18);
+}
+
+/* COLLAPSED STATE */
+
+.announcement-wrapper.collapsed .announcement-box{
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transform:
+    scale(0.3);
+
+}
+
+/* ICON SHOW */
+
+.announcement-wrapper.collapsed .announcement-icon{
+
+    opacity:1;
+
+    transform:
+    scale(1);
+}
+
+/* EXPANDED */
+
+.announcement-wrapper:not(.collapsed) .announcement-icon{
+
+    opacity:0;
+
+    transform:
+    scale(0.3);
+
+    pointer-events:none;
+}
+
+/* ========================= */
+/* GLOW */
+/* ========================= */
+
+.announcement-glow{
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(0,162,255,0.35),
+        transparent 70%
+    );
+
+    top:-70px;
+    right:-50px;
+
+    filter:blur(20px);
+
+    animation:
+    glowFloat 6s ease-in-out infinite;
+}
+
+/* CONTENT */
+
+.announcement-content{
+    position:relative;
+
+    z-index:2;
+}
+
+.announcement-tag{
+    display:inline-block;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    background:
+    rgba(255,255,255,0.18);
+
+    color:#0171b9;
+
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:16px;
+}
+
+.announcement-content h4{
+    font-size:28px;
+
+    line-height:1.1;
+
+    color:#000;
+
+    margin-bottom:12px;
+
+    font-weight:800;
+}
+
+.announcement-content p{
+    color:#333;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.announcement-content a{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    background:#0171b9;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:0.35s ease;
+
+    box-shadow:
+    0 10px 25px rgba(1,113,185,0.35);
+}
+
+.announcement-content a:hover{
+    transform:
+    translateY(-4px)
+    scale(1.03);
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes ping{
+
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1.7);
+        opacity:0;
+    }
+}
+
+@keyframes glowFloat{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:
+        translate(-20px,15px);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .announcement-wrapper{
+        right:12px;
+        bottom:12px;
+    }
+
+    .announcement-box{
+        width:calc(100vw - 24px);
+
+        max-width:340px;
+    }
+
+    .announcement-content h4{
+        font-size:22px;
     }
 }

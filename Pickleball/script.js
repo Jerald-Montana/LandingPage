@@ -122,3 +122,39 @@ infoCards.forEach((card) => {
     });
 
 });
+
+
+/* ========================= */
+/* ANNOUNCEMENT COLLAPSE */
+/* ========================= */
+
+const announcement =
+document.getElementById("announcement");
+
+/* COLLAPSE AFTER 3 SECONDS */
+
+setTimeout(() => {
+
+    announcement.classList.add("collapsed");
+
+}, 3000);
+
+/* EXPAND ON HOVER */
+
+announcement.addEventListener("mouseenter", () => {
+
+    announcement.classList.remove("collapsed");
+
+});
+
+/* COLLAPSE AGAIN */
+
+announcement.addEventListener("mouseleave", () => {
+
+    setTimeout(() => {
+
+        announcement.classList.add("collapsed");
+
+    }, 1200);
+
+});

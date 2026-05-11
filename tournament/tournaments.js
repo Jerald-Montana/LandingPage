@@ -1,48 +1,15 @@
 const tournaments = [
 
     {
-        image: "images/tournament1.jpg",
-        badge: "FEATURED",
-        date: "March 28-30, 2026",
-        title: "Philippine Pickleball Amateur Nationals",
-        location: "Las Piñas City, Philippines",
+        image: "../images/14.jpeg",
+        badge: "Featured Event",
+        date: "May 16-17, 2026",
+        title: "Philippine Pickleball Epic Championships 2026",
+        location: "TBA",
         description:
-        "Compete in the country's national amateur championship and earn official rankings.",
-        status: "Registration Open"
+        "Compete in the country's national Epic Championships and earn official rankings.",
+        status: "Pre-Registration Open"
     },
-
-    {
-        image: "images/tournament2.jpg",
-        badge: "OPEN",
-        date: "April 12-14, 2026",
-        title: "Manila Smash Open",
-        location: "Pasig City, Philippines",
-        description:
-        "A high-energy tournament featuring singles, doubles, and mixed doubles divisions.",
-        status: "Registration Open"
-    },
-
-    {
-        image: "images/tournament3.jpg",
-        badge: "PRO",
-        date: "May 5-7, 2026",
-        title: "Cebu Pickleball Clash",
-        location: "Cebu City, Philippines",
-        description:
-        "Join elite and amateur players in one of the biggest pickleball events in Visayas.",
-        status: "Few Slots Left"
-    },
-
-    {
-        image: "images/tournament4.jpg",
-        badge: "COMMUNITY",
-        date: "June 10, 2026",
-        title: "Davao Social Play Cup",
-        location: "Davao City, Philippines",
-        description:
-        "Friendly social competition designed for beginners and casual players.",
-        status: "Registration Open"
-    }
 
 ];
 
