@@ -584,6 +584,13 @@ body{
 
     .tournament-section{
         padding:80px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tournament-grid{
+        justify-content: center;
+        align-items: center;
     }
 
     .card-title{
