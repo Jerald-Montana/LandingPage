@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family:'Poppins',sans-serif;
+    font-family:'Arial',sans-serif;
     background:#eef5ff;
     overflow-x:hidden;
     color:#111;
@@ -213,48 +213,27 @@ body{
 
 .tournament-grid{
     display:grid;
-
-    /* FIXED CARD SIZE */
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(320px, 380px));
-
+    grid-template-columns:repeat(auto-fit, minmax(320px, 380px));
     gap:35px;
-
-    /* ALWAYS START LEFT */
-
     justify-content:start;
-
-    align-items:start;
+    align-items:stretch;
 }
-
 
 .tournament-card{
     position:relative;
-
     background:white;
-
     border-radius:28px;
-
     overflow:hidden;
-
     width:100%;
     max-width:380px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.08);
-
-    transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-
+    min-height:620px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    transition:transform 0.4s ease, box-shadow 0.4s ease;
     opacity:0;
-
-    transform:
-    translateY(60px);
-
-    animation:
-    cardReveal 1s ease forwards;
+    transform:translateY(60px);
+    animation:cardReveal 1s ease forwards;
 }
 
 .tournament-card:hover{
@@ -268,9 +247,8 @@ body{
 
 .card-image{
     position:relative;
-
     height:220px;
-
+    flex-shrink:0;
     overflow:hidden;
 }
 
@@ -327,6 +305,9 @@ body{
 
 .card-content{
     padding:28px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
 .card-date{
@@ -339,12 +320,10 @@ body{
 
 .card-title{
     margin-top:12px;
-
-    font-size:28px;
-
+    font-size:26px;
     font-weight:800;
-
     line-height:1.2;
+    min-height:94px;
 }
 
 .card-location{
@@ -357,19 +336,42 @@ body{
 
 .card-description{
     margin-top:18px;
-
     color:#555;
-
     line-height:1.7;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
 }
 
+.card-description.expanded{
+    display:block;
+    -webkit-line-clamp:unset;
+    overflow:visible;
+}
+
+.read-more-btn{
+    margin-top:10px;
+    width:max-content;
+    border:none;
+    background:transparent;
+    color:#1d8fff;
+    font-weight:800;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.read-more-btn:hover{
+    text-decoration:underline;
+}
 
 .card-footer{
-    margin-top:25px;
-
+    margin-top:auto;
+    padding-top:25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:15px;
 }
 
 

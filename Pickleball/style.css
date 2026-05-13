@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family:'Poppins',sans-serif;
+    font-family:'Arial',sans-serif;
     overflow-x:hidden;
     background:#eef6ff;
 }
@@ -160,7 +160,7 @@ body{
     position:relative;
     z-index:5;
 
-    width:min(90%, 900px);
+    width:min(90%, 950spx);
 
     text-align:center;
 
@@ -190,7 +190,7 @@ body{
 
 
 .main-title{
-    font-size:clamp(34px, 7vw, 60px);
+    font-size:clamp(34px, 7vw, 50px);
 
     line-height:0.95;
 
@@ -216,7 +216,7 @@ body{
 
     display:block;
 
-    font-size:clamp(34px, 7vw, 70px);
+    font-size:clamp(34px, 7vw, 60px);
 
     font-weight:800;
 
@@ -228,7 +228,7 @@ body{
 .description{
     margin-top:28px;
 
-    font-size:clamp(14px, 2vw, 20px);
+    font-size:clamp(14px, 2vw, 16px);
 
     line-height:1.8;
 
@@ -946,7 +946,7 @@ body{
 
 
 .tournament-title{
-    font-size:clamp(38px, 5vw, 72px);
+    font-size:clamp(38px, 5vw, 55px);
 
     line-height:1;
 
@@ -961,7 +961,7 @@ body{
 
 .tournament-title p{
     font-weight: 500;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .tournament-title span{
