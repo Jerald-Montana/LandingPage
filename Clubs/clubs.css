@@ -1,0 +1,629 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(180deg,#eef7ff,#dff0ff);
+    color:#111;
+    overflow-x:hidden;
+}
+
+.clubs-hero{
+    position:relative;
+    min-height:42vh;
+    padding:90px 20px 130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0057a8,#1d8fff);
+}
+
+.hero-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(60px);
+    opacity:0.35;
+}
+
+.glow-one{
+    width:420px;
+    height:420px;
+    background:rgba(255,255,255,0.15);
+    top:-130px;
+    left:-120px;
+    animation:glowMove 8s ease-in-out infinite;
+}
+
+.glow-two{
+    width:360px;
+    height:360px;
+    background:rgba(0,255,255,0.2);
+    bottom:-120px;
+    right:-100px;
+    animation:glowMoveTwo 10s ease-in-out infinite;
+}
+
+.hero-ball{
+    position:absolute;
+    border-radius:50%;
+    background:#dfff39;
+    box-shadow:0 0 15px #dfff39,0 0 35px #dfff39;
+}
+
+.ball-one{
+    width:30px;
+    height:30px;
+    top:30%;
+    left:15%;
+    animation:ballFloat 4s ease-in-out infinite;
+}
+
+.ball-two{
+    width:24px;
+    height:24px;
+    bottom:24%;
+    right:18%;
+    animation:ballFloatTwo 5s ease-in-out infinite;
+}
+
+.clubs-hero-content{
+    position:relative;
+    z-index:5;
+    max-width:900px;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.18);
+    color:white;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.clubs-hero-content h1{
+    font-size:clamp(44px,8vw,75px);
+    line-height:0.95;
+    font-weight:800;
+    color:white;
+}
+
+.clubs-hero-content h1 span{
+    display:block;
+    color:#dfff39;
+}
+
+.clubs-hero-content p{
+    margin-top:24px;
+    color:white;
+    line-height:1.8;
+    font-size:clamp(15px,2vw,18px);
+}
+
+.map-section{
+    width:min(1300px,92%);
+    margin:-80px auto 100px;
+    position:relative;
+    z-index:10;
+}
+
+.map-header{
+    background:white;
+    border-radius:34px;
+    padding:34px;
+    margin-bottom:32px;
+    box-shadow:0 20px 45px rgba(0,0,0,0.08);
+}
+
+.small-title{
+    color:#1d8fff;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.map-header h2,
+.form-header h2{
+    margin-top:10px;
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.05;
+    font-weight:800;
+}
+
+.map-header p,
+.form-header p{
+    margin-top:14px;
+    color:#555;
+    line-height:1.7;
+    max-width:100%;
+}
+
+.map-layout{
+    display:grid;
+    grid-template-columns:1fr 350px;
+    gap:30px;
+    align-items:stretch;
+}
+
+.map-card{
+    background:white;
+    border-radius:34px;
+    padding:16px;
+    box-shadow:0 22px 50px rgba(0,0,0,0.1);
+    overflow:hidden;
+    min-height:650px;
+}
+
+#philippinesMap{
+    width:100%;
+    height:650px;
+    border-radius:24px;
+    overflow:hidden;
+}
+
+.location-panel{
+    position:relative;
+    background:linear-gradient(135deg,#ffffff,#f3f9ff);
+    border-radius:34px;
+    padding:30px;
+    box-shadow:0 22px 50px rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+
+.location-panel::before{
+    content:'';
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(29,143,255,0.16),transparent 70%);
+    top:-100px;
+    right:-90px;
+}
+
+.panel-icon{
+    position:relative;
+    width:80px;
+    height:80px;
+    border-radius:26px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1d8fff,#0066d6);
+    color:white;
+    font-size:36px;
+    margin-bottom:24px;
+    box-shadow:0 16px 35px rgba(29,143,255,0.3);
+}
+
+.location-panel h3{
+    position:relative;
+    font-size:30px;
+    line-height:1.15;
+    margin-bottom:12px;
+    font-weight:800;
+}
+
+.location-panel p{
+    position:relative;
+    color:#555;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+.club-search-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:white;
+    border:2px solid rgba(29,143,255,0.15);
+    border-radius:18px;
+    padding:14px 16px;
+    margin-bottom:18px;
+    box-shadow:0 10px 24px rgba(0,0,0,0.05);
+}
+
+.club-search-box i{
+    color:#1d8fff;
+}
+
+.club-search-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:15px;
+    font-weight:600;
+    color:#111;
+}
+
+.location-list{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    max-height:360px;
+    overflow-y:auto;
+    padding-right:6px;
+}
+
+.location-item{
+    padding:18px;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 10px 24px rgba(0,0,0,0.06);
+    cursor:pointer;
+    transition:0.3s ease;
+    border:2px solid transparent;
+}
+
+.location-item:hover,
+.location-item.active{
+    border-color:#1d8fff;
+    transform:translateY(-4px);
+}
+
+.location-item h4{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.location-item p{
+    margin:0 0 6px;
+    font-size:14px;
+    color:#555;
+}
+
+.location-item span{
+    display:block;
+    color:#1d8fff;
+    font-size:13px;
+    font-weight:800;
+    margin-top:6px;
+}
+
+.no-club-result{
+    padding:22px;
+    border-radius:18px;
+    background:white;
+    color:#777;
+    text-align:center;
+    font-weight:700;
+}
+
+.custom-pin{
+    width:34px;
+    height:34px;
+    border-radius:50% 50% 50% 0;
+    background:#ff2d2d;
+    transform:rotate(-45deg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 0 0 6px rgba(255,45,45,0.2),0 12px 24px rgba(255,45,45,0.4);
+}
+
+.custom-pin::after{
+    content:'';
+    width:13px;
+    height:13px;
+    background:white;
+    border-radius:50%;
+}
+
+.leaflet-popup-content-wrapper{
+    border-radius:18px;
+    box-shadow:0 18px 35px rgba(0,0,0,0.16);
+}
+
+.popup-card{
+    width:240px;
+}
+
+.popup-image{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+    border-radius:14px;
+    margin-bottom:14px;
+}
+
+.popup-info h3{
+    font-size:18px;
+    margin-bottom:10px;
+    color:#111;
+}
+
+.popup-info p{
+    margin:7px 0;
+    color:#555;
+    line-height:1.5;
+    font-size:13px;
+}
+
+.popup-info strong{
+    color:#1d8fff;
+}
+
+.register-toggle-box{
+    margin-top:34px;
+}
+
+.register-toggle{
+    width:100%;
+    border:none;
+    border-radius:30px;
+    padding:24px 30px;
+    background:linear-gradient(135deg,#1d8fff,#0066d6);
+    color:white;
+    font-size:22px;
+    font-weight:800;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 18px 40px rgba(29,143,255,0.32);
+    transition:0.35s ease;
+}
+
+.register-toggle:hover{
+    transform:translateY(-5px);
+}
+
+.register-toggle i{
+    transition:0.35s ease;
+}
+
+.register-toggle.active i{
+    transform:rotate(180deg);
+}
+
+.register-form-section{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    margin-top:0;
+    position:relative;
+    border-radius:36px;
+    background:linear-gradient(135deg,#ffffff,#f3f9ff);
+    box-shadow:0 22px 50px rgba(0,0,0,0.1);
+    transition:max-height 0.8s ease, opacity 0.5s ease, margin-top 0.5s ease, padding 0.5s ease;
+    padding:0 36px;
+}
+
+.register-form-section.show{
+    max-height:1600px;
+    opacity:1;
+    margin-top:30px;
+    padding:38px 36px;
+}
+
+.form-glow{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(29,143,255,0.16),transparent 70%);
+    top:-120px;
+    right:-100px;
+}
+
+.form-ball{
+    position:absolute;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#dfff39;
+    right:40px;
+    bottom:40px;
+    box-shadow:0 0 15px #dfff39,0 0 35px #dfff39;
+    animation:ballFloat 4s ease-in-out infinite;
+}
+
+.form-header,
+.club-form{
+    position:relative;
+    z-index:2;
+}
+
+.club-form{
+    margin-top:34px;
+}
+
+.checkbox-group{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:24px;
+}
+
+.checkbox-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:white;
+    padding:16px 18px;
+    border-radius:18px;
+    border:2px solid rgba(29,143,255,0.15);
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.checkbox-item:hover{
+    border-color:#1d8fff;
+    transform:translateY(-3px);
+}
+
+.checkbox-item input{
+    width:18px;
+    height:18px;
+    accent-color:#1d8fff;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.form-group.full{
+    margin-top:22px;
+}
+
+.form-group label{
+    font-weight:800;
+    color:#111;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    border:2px solid rgba(29,143,255,0.15);
+    border-radius:18px;
+    padding:16px 18px;
+    outline:none;
+    font-size:15px;
+    background:white;
+    transition:0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#1d8fff;
+    box-shadow:0 10px 24px rgba(29,143,255,0.12);
+}
+
+.submit-club-btn{
+    margin-top:28px;
+    border:none;
+    padding:18px 34px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#1d8fff,#0066d6);
+    color:white;
+    font-weight:800;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 15px 30px rgba(29,143,255,0.32);
+    transition:0.35s ease;
+}
+
+.submit-club-btn:hover{
+    transform:translateY(-5px) scale(1.03);
+}
+
+.form-success-message{
+    display:none;
+    margin-top:22px;
+    padding:18px 22px;
+    border-radius:18px;
+    background:#e9fff3;
+    color:#138a4d;
+    font-weight:800;
+    align-items:center;
+    gap:12px;
+}
+
+.form-success-message.show{
+    display:flex;
+}
+
+@keyframes glowMove{
+    0%,100%{ transform:translate(0,0); }
+    50%{ transform:translate(50px,30px); }
+}
+
+@keyframes glowMoveTwo{
+    0%,100%{ transform:translate(0,0); }
+    50%{ transform:translate(-40px,-25px); }
+}
+
+@keyframes ballFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-14px) scale(1.08); }
+}
+
+@keyframes ballFloatTwo{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(12px) translateX(-8px); }
+}
+
+@media(max-width:1000px){
+    .map-layout{
+        grid-template-columns:1fr;
+    }
+
+    .map-card{
+        min-height:520px;
+    }
+
+    #philippinesMap{
+        height:520px;
+    }
+
+    .location-list{
+        max-height:none;
+    }
+}
+
+@media(max-width:700px){
+    .clubs-hero{
+        padding:80px 20px 110px;
+    }
+
+    .map-section{
+        margin:-70px auto 80px;
+    }
+
+    .map-header,
+    .location-panel{
+        padding:26px;
+    }
+
+    .map-card{
+        padding:10px;
+        border-radius:26px;
+        min-height:430px;
+    }
+
+    #philippinesMap{
+        height:430px;
+        border-radius:20px;
+    }
+
+    .register-toggle{
+        font-size:17px;
+        padding:20px;
+    }
+
+    .register-form-section.show{
+        padding:28px 22px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .submit-club-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
