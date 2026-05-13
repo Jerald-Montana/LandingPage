@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements | Pickleball Philippines</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="announcement.css">
+</head>
+
+<body>
+
+    <section class="announcement-hero">
+        <div class="hero-glow glow1"></div>
+        <div class="hero-glow glow2"></div>
+
+        <div class="hero-ball ball1"></div>
+        <div class="hero-ball ball2"></div>
+
+        <div class="announcement-hero-content">
+            <div class="hero-badge">LATEST UPDATES</div>
+
+            <h1>
+                OFFICIAL
+                <span>ANNOUNCEMENTS</span>
+            </h1>
+
+            <p>
+                Stay updated with tournaments, community events,
+                registration schedules, and important pickleball news.
+            </p>
+        </div>
+    </section>
+
+    <section class="announcement-section">
+
+        <div class="announcement-top">
+            <div class="small-title">NEWS & EVENTS</div>
+            <h2>Latest Announcements</h2>
+            <p>Click any announcement card to view the full details.</p>
+        </div>
+
+        <div class="announcement-layout">
+
+            <div class="announcement-grid" id="announcementGrid"></div>
+
+            <div class="announcement-detail" id="announcementDetail">
+                <div class="detail-placeholder">
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3>Select an announcement</h3>
+                    <p>The full announcement details will appear here.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="empty-announcement" id="emptyAnnouncement">
+            <div class="empty-ball"></div>
+
+            <div class="empty-icon">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+
+            <h2>No announcements available.</h2>
+
+            <p>
+                Check back later for official updates,
+                tournaments, and upcoming community events.
+            </p>
+        </div>
+
+    </section>
+
+    <script src="announcement.js"></script>
+
+</body>
+</html>
