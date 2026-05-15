@@ -1,30 +1,30 @@
 const tournaments = [
     {
-        image: "../images/14.jpeg",
-        badge: "Featured Event",
-        date: "May 16-17, 2026",
-        title: "Philippine Pickleball Epic Championships 2026",
+        image: "../images/Tournament/elite-championship.png",
+        badge: "REGISTRATION OPEN",
+        date: "May 2026",
+        title: "Philippine Pickleball Elite Championships 2026",
         location: "TBA",
         description:
-        "Compete in the country's national Epic Championships and earn official rankings.",
+        "The Philippine Pickleball Federation is calling on elite players to represent the nation at the 2026 Pickleball World Cup, taking place August 30 – September 5 in Da Nang, Vietnam!",
         status: "Pre-Registration Open",
-        link: "../events/epic-championships.html",
-        buttonText: "View Event",
+        link: "https://www.cognitoforms.com/Pickleball13/PickleballWorldCupQualificationExpressionOfInterest",
+        buttonText: "Go to Forms",
         buttonIcon: "fa-arrow-right",
         newTab: false
     },
     {
-        image: "../images/13.jpeg",
-        badge: "Registration Open",
+        image: "../images/PICKLEBALL-WORLD-CUP.jpg",
+        badge: "FEATURED EVENT",
         date: "Aug 30, 2026",
         title: "2026 Pickleball World Cup",
         location: "Da Nang, Vietnam",
         description:
-        "The Philippine Pickleball Federation is calling on elite players to represent the nation at the 2026 Pickleball World Cup, taking place August 30 – September 5 in Da Nang, Vietnam!",
+        "Over 65 delegations, fighting for a dream 🌍 🏆 One World, One Game, One Champion 🗓️ Aug 30th - Sep 6th, 2026",
         status: "Registration Forms",
-        link: "https://www.cognitoforms.com/Pickleball13/PickleballWorldCupQualificationExpressionOfInterest",
-        buttonText: "Go to forms",
-        buttonIcon: "fa-file-lines",
+        link: "https://en.vietnamplus.vn/pickleball-world-cup-2026-to-be-held-in-da-nang-post341769.vnp",
+        buttonText: "View Event ",
+        buttonIcon: "fa-eye",
         newTab: true
     }
 ];
