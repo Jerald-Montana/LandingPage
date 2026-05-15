@@ -15,23 +15,14 @@ const events = [
         color: "blue",
         location: "Manila"
     },
-
     {
-        start: "2026-05-16",
-        end: "2026-05-16",
-        title: "Junior Pickleball Open",
-        color: "green",
-        location: "Pasig"
-    },
-
-    {
-        start: "2026-05-18",
-        end: "2026-05-20",
-        title: "Training Camp",
+        start: "2026-08-30",
+        end: "2026-09-05",
+        title: "2026 Pickleball World Cup",
         color: "orange",
-        location: "Taguig"
+        location: "Da Nang, Vietnam"
     }
-
+    
 ];
 
 function renderCalendar(){
