@@ -14,13 +14,13 @@ body{
 .coach-hero{
     position:relative;
     min-height:42vh;
-    padding:90px 20px 130px;
+    padding:90px 20px 110px;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     overflow:hidden;
-    background:linear-gradient(135deg,#0057a8,#1d8fff);
+    background:linear-gradient(135deg,#284f8f,#0b2b5e);
 }
 
 .hero-glow{
@@ -96,10 +96,6 @@ body{
     color:white;
 }
 
-.coach-hero-content h1 span{
-    display:block;
-    color:#dfff39;
-}
 
 .coach-hero-content p{
     margin-top:24px;
@@ -124,7 +120,7 @@ body{
 }
 
 .small-title{
-    color:#1d8fff;
+    color:#284f8f;
     font-size:13px;
     font-weight:800;
     letter-spacing:2px;
@@ -138,7 +134,7 @@ body{
 }
 
 .coach-top h2 span{
-    color:#1d8fff;
+    color:#284f8f;
 }
 
 .coach-top p{
@@ -209,7 +205,7 @@ body{
     font-size:38px;
     line-height:1.05;
     font-weight:800;
-    color:#1d8fff;
+    color:#284f8f;
 }
 
 .coach-title{
@@ -241,13 +237,13 @@ body{
 }
 
 .coach-info i{
-    color:#1d8fff;
+    color:#284f8f;
     font-size:18px;
 }
 
 
 .certificate-box{
-    align-self:end;
+
     background:linear-gradient(135deg,#f7fbff,#eaf6ff);
     border:2px solid rgba(29,143,255,0.12);
     border-radius:26px;
@@ -256,6 +252,7 @@ body{
 }
 
 .certificate-box h4{
+
     font-size:18px;
     margin-bottom:14px;
     color:#111;
@@ -263,7 +260,7 @@ body{
 
 .certificate-img{
     width:100%;
-    max-width:620px;
+    max-width:380px;
     height:260px;
     object-fit:contain;
     object-position:center;
@@ -293,7 +290,7 @@ body{
 
 .copy-btn:hover{
     transform:scale(1.08);
-    background:#7fb5f0;
+    background:#839fd1;
 }
 
 @keyframes glowMove{
