@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PICL Registration</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="picl-registration.css">
+</head>
+
+<body>
+
+<section class="picl-page">
+
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+  <div class="floating-ball ball-one"></div>
+  <div class="floating-ball ball-two"></div>
+
+  <div class="registration-card">
+
+    <div class="form-header">
+      <div class="badge">PICKLEBALL INTER COLLEGIATE LEAGUE</div>
+
+      <h1>
+        PICL Team
+        <span>Registration</span>
+      </h1>
+
+      <p>
+        Register your school team by completing the required team and player information below.
+      </p>
+    </div>
+
+    <form id="piclForm">
+
+      <div class="division-select">
+        <label class="division-card active">
+          <input type="radio" name="division" value="Junior Division" checked required>
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Junior Division</span>
+        </label>
+
+        <label class="division-card">
+          <input type="radio" name="division" value="Alumni Division" required>
+          <i class="fa-solid fa-user-graduate"></i>
+          <span>Alumni Division</span>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>Team Name</label>
+        <input type="text" required placeholder="Enter team name">
+      </div>
+
+      <div class="two-column">
+        <div class="form-group">
+          <label>Coordinator</label>
+          <input type="text" required placeholder="Coordinator full name">
+        </div>
+
+        <div class="form-group">
+          <label>Coach</label>
+          <input type="text" required placeholder="Coach full name">
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h2>Official Players</h2>
+        <p>All main players are required. Upload verified school ID per player.</p>
+      </div>
+
+      <div class="players-grid">
+
+        <div class="player-row">
+          <div class="form-group">
+            <label>Male 1</label>
+            <input type="text" required placeholder="Player full name">
+          </div>
+
+          <div class="form-group">
+            <label>DUPR ID</label>
+            <input type="text" required placeholder="DUPR ID">
+          </div>
+
+          <div class="upload-wrapper">
+            <label class="upload-btn">
+              <input type="file" required accept=".jpg,.jpeg,.png,.pdf">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>ID</span>
+            </label>
+
+            <small class="upload-message">
+            </small>
+          </div>
+        </div>
+
+        <div class="player-row">
+          <div class="form-group">
+            <label>Male 2</label>
+            <input type="text" required placeholder="Player full name">
+          </div>
+
+          <div class="form-group">
+            <label>DUPR ID</label>
+            <input type="text" required placeholder="DUPR ID">
+          </div>
+
+          <div class="upload-wrapper">
+            <label class="upload-btn">
+              <input type="file" required accept=".jpg,.jpeg,.png,.pdf">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>ID</span>
+            </label>
+
+            <small class="upload-message">
+            </small>
+          </div>
+        </div>
+
+        <div class="player-row">
+          <div class="form-group">
+            <label>Female 1</label>
+            <input type="text" required placeholder="Player full name">
+          </div>
+
+          <div class="form-group">
+            <label>DUPR ID</label>
+            <input type="text" required placeholder="DUPR ID">
+          </div>
+
+          <div class="upload-wrapper">
+            <label class="upload-btn">
+              <input type="file" required accept=".jpg,.jpeg,.png,.pdf">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>ID</span>
+            </label>
+
+            <small class="upload-message">
+            </small>
+          </div>
+        </div>
+
+        <div class="player-row">
+          <div class="form-group">
+            <label>Female 2</label>
+            <input type="text" required placeholder="Player full name">
+          </div>
+
+          <div class="form-group">
+            <label>DUPR ID</label>
+            <input type="text" required placeholder="DUPR ID">
+          </div>
+
+          <div class="upload-wrapper">
+            <label class="upload-btn">
+              <input type="file" required accept=".jpg,.jpeg,.png,.pdf">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>ID</span>
+            </label>
+
+            <small class="upload-message">
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-title optional">
+        <h2>Substitute Players</h2>
+        <p>Optional backup players for your team.</p>
+      </div>
+
+      <div class="players-grid">
+
+        <div class="player-row">
+          <div class="form-group">
+            <label>Sub 1</label>
+            <input type="text" placeholder="Substitute player name">
+          </div>
+
+          <div class="form-group">
+            <label>DUPR ID</label>
+            <input type="text" placeholder="DUPR ID">
+          </div>
+
+          <div class="upload-wrapper">
+            <label class="upload-btn">
+              <input type="file" accept=".jpg,.jpeg,.png,.pdf">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>ID</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="player-row">
+          <div class="form-group">
+            <label>Sub 2</label>
+            <input type="text" placeholder="Substitute player name">
+          </div>
+
+          <div class="form-group">
+            <label>DUPR ID</label>
+            <input type="text" placeholder="DUPR ID">
+          </div>
+
+          <div class="upload-wrapper">
+            <label class="upload-btn">
+              <input type="file" accept=".jpg,.jpeg,.png,.pdf">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>ID</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="payment-box">
+        <div>
+          <h3>Proceed to Payment</h3>
+          <p>Submit your registration details and continue to payment processing.</p>
+        </div>
+
+        <button type="submit" class="payment-btn">
+          Pay Registration Fee
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="success-message" id="successMessage">
+        <i class="fa-solid fa-circle-check"></i>
+        Registration details saved. Connecting to payment Gateway.
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+<script src="picl-registration.js"></script>
+</body>
+</html>

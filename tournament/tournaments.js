@@ -8,10 +8,10 @@ const tournaments = [
         description:
         "The Philippine Pickleball Federation is calling on elite players to represent the nation at the 2026 Pickleball World Cup, taking place August 30 – September 5 in Da Nang, Vietnam!",
         status: "Pre-Registration Open",
-        link: "https://www.cognitoforms.com/Pickleball13/PickleballWorldCupQualificationExpressionOfInterest",
+        link: "https://www.cognitoforms.com/Pickleball13/PHWorldCupQualifiers",
         buttonText: "Go to Forms",
         buttonIcon: "fa-arrow-right",
-        newTab: false
+        newTab: true
     },
     {
         image: "../images/PICKLEBALL-WORLD-CUP.jpg",
@@ -25,6 +25,20 @@ const tournaments = [
         link: "https://en.vietnamplus.vn/pickleball-world-cup-2026-to-be-held-in-da-nang-post341769.vnp",
         buttonText: "View Event ",
         buttonIcon: "fa-eye",
+        newTab: true
+    },
+    {
+        image: "../images/Tournament/PICL.png",
+        badge: "REGISTRATION OPEN",
+        date: "TBA",
+        title: "Pickleball Inter-Collegiate League",
+        location: "Philippines",
+        description:
+        "The Pickleball Inter Collegiate League (PICL) brings together top collegiate athletes, rising junior talents, and distinguished alumni from leading schools in a competitive showcase of skill, sportsmanship, and school pride.",
+        status: "Registration Forms",
+        link: "../PICL/picl-registrationForm.html",
+        buttonText: "Register ",
+        buttonIcon: "fa-arrow-right",
         newTab: true
     }
 ];

@@ -215,8 +215,8 @@ body{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(320px, 380px));
     gap:35px;
-    justify-content:start;
-    align-items:stretch;
+    justify-content:center;
+    align-items:center;
 }
 
 .tournament-card{
