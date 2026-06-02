@@ -48,48 +48,80 @@
   </section>
 
 
-  <section class="tournament-section">
+<section class="tournament-section">
 
-    <div class="section-title">
+  <div class="section-title">
+    <h2>Upcoming Tournaments</h2>
+  </div>
 
-      <h2>
-        Upcoming Tournaments
-      </h2>
+  <div class="tournament-layout">
 
-    </div>
+    <aside class="tournament-info-card">
 
-
-    <div class="tournament-grid" id="tournamentGrid">
-
-
-    </div>
-
-    
-    <div class="empty-tournament-state" id="emptyTournamentState">
-      <div class="empty-bg-ball ball-one"></div>
-      <div class="empty-bg-ball ball-two"></div>
-
-      <div class="empty-icon">
-         <i class="fa-solid fa-clock-rotate-left"></i>
+      <div class="info-badge">
+        <i class="fa-solid fa-star"></i>
+        EVENTS HUB
       </div>
 
-      <h2>No tournaments available at this time.</h2>
+      <h2>Find Your Next Tournament</h2>
 
       <p>
-        Check back soon for upcoming tournaments, leagues, and community events.
+        View official tournaments, registration forms, and featured pickleball events across the Philippines and international competitions.
       </p>
 
+      <div class="info-list">
+
+        <div class="info-item">
+          <i class="fa-solid fa-trophy"></i>
+          <div>
+            <h4>Official Events</h4>
+            <span>Browse sanctioned and featured pickleball tournaments.</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-file-lines"></i>
+          <div>
+            <h4>Registration Links</h4>
+            <span>Open forms and event details directly from each card.</span>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <div>
+            <h4>Event Calendar</h4>
+            <span>Check upcoming dates and tournament schedules.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <div class="tournament-grid" id="tournamentGrid"></div>
+
+  </div>
+
+  <div class="empty-tournament-state" id="emptyTournamentState">
+    <div class="empty-icon">
+      <i class="fa-solid fa-clock-rotate-left"></i>
     </div>
-    
-    <div class="cta-buttons">
 
-      <a href="../Calendar/calendar.html" class="cta-btn secondary-cta-btn">
-        Check Calendar
-      </a>
+    <h2>No tournaments available at this time.</h2>
 
-    </div>
+    <p>
+      Check back soon for upcoming tournaments, leagues, and community events.
+    </p>
+  </div>
 
-  </section>
+  <div class="cta-buttons">
+    <a href="../Calendar/calendar.html" class="cta-btn secondary-cta-btn">
+      Check Calendar
+    </a>
+  </div>
+
+</section>
 
 
   <script src="tournaments.js"></script>
