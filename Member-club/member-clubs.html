@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Clubs | Pickleball Philippines</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="member-clubs.css">
+</head>
+
+<body>
+
+<section class="clubs-hero">
+
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="hero-ball ball-one"></div>
+    <div class="hero-ball ball-two"></div>
+
+    <div class="clubs-hero-content">
+
+        <div class="hero-badge">
+            PICKLEBALL PHILIPPINES
+        </div>
+
+        <h1>
+            MEMBER
+            <span>CLUBS</span>
+        </h1>
+
+        <p>
+            Discover pickleball clubs, courts, and communities across the Philippines.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="clubs-directory">
+
+    <div class="directory-header">
+
+        <div class="small-title">
+            COMMUNITY DIRECTORY
+        </div>
+
+        <h2>
+            Official Member Clubs
+        </h2>
+
+        <p>
+            Find pickleball clubs, connect with communities, and discover where to play.
+        </p>
+
+    </div>
+
+
+    <div class="club-stats">
+
+        <div class="stat-card">
+            <h3 id="clubCounter">0</h3>
+            <p>Member Clubs</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>37,066</h3>
+            <p>Pickleball Players</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>365</h3>
+            <p>Venues</p>
+        </div>
+
+    </div>
+
+
+    <div class="search-area">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input 
+                type="text" 
+                id="clubSearch" 
+                placeholder="Search club name or location..."
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="clubs-grid" id="clubsGrid"></div>
+
+
+    <div class="empty-state" id="emptyState">
+
+        <div class="empty-icon">
+            <i class="fa-solid fa-face-frown"></i>
+        </div>
+
+        <h2>
+            No clubs found.
+        </h2>
+
+        <p>
+            Try searching another club name or location.
+        </p>
+
+    </div>
+
+</section>
+
+<script src="member-clubs-data.js"></script>
+<script src="member-clubs.js"></script>
+</body>
+</html>s
