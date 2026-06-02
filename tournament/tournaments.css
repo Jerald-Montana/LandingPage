@@ -399,21 +399,21 @@ body{
 }
 
 .empty-icon{
-    width:80px;
-    height:80px;
-    border-radius:32px;
+    width:60px;
+    height:60px;
+    border-radius:25px;
     display:flex;
     justify-content:center;
     align-items:center;
     background:linear-gradient(135deg,#284f8f,#284f8f);
     color:white;
-    font-size:42px;
+    font-size:30px;
     margin-bottom:25px;
     box-shadow:0 18px 35px rgba(29,143,255,0.35);
 }
 
 .empty-tournament-state h2{
-    font-size:clamp(34px,5vw,44px);
+    font-size:clamp(30px,5vw,36px);
     line-height:1.05;
     font-weight:800;
     max-width:850px;
